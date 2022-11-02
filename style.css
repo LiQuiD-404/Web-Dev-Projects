@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
-    
+
 }
-body{
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+body {
+    background: linear-gradient(to left, #3856a6, #492675);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     height: 200vh;
-    
+
 }
 
-.intro{
+.intro {
     font-weight: 100;
     margin-top: 3em;
     /* border: 1px solid red; */
@@ -24,11 +28,23 @@ body{
     font-size: 2rem;
 }
 
-.intro span{
-    color: blue;
+.intro span {
+    color: rgb(24, 210, 24);
+    display: inline-block;
 }
 
-.subintro{
+@media (max-width:418px) {
+    .intro{
+        padding-left: 15px;
+        display: block;
+    }
+    .subintro{
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+}
+
+.subintro {
     /* border: 1px solid red; */
     display: flex;
     align-items: center;
@@ -37,30 +53,54 @@ body{
     font-weight: 100;
 }
 
-.projects{
+.projects {
     padding-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-auto-rows: minmax(200px, 300px);
-    padding:10px;
-   
+    padding: 10px;
+
 }
 
-.grid-item{
-    position: relative;;
+@media (max-width:645px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(200px, 300px);
+        padding: 10px;
+    
+    }
+}
+
+/* @media  (min-width:460px) and (max-width:716px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(200px, 300px);
+        padding: 10px;
+    
+    }
+} */
+
+.grid-item {
+    position: relative;
+    ;
     overflow: hidden;
     display: flex;
     justify-content: center;
     border-radius: 10px;
 }
 
-#creditcard{
+#creditcard {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,17 +108,14 @@ body{
 
 
 .grid-item img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.grid-item:hover img {
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
-#apple:hover{
-    border: 1px solid red;
-     
+.grid-item:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
+
